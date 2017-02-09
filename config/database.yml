@@ -14,7 +14,6 @@ development:
   encoding: unicode
   database: rails_dev
   username: rails_user
-  password: ********（パスワードが無い場合には空白）
   host: localhost
 
 # Warning: The database defined as "test" will be erased and
