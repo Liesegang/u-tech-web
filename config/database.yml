@@ -12,7 +12,7 @@ default: &default
 development:
   <<: *default
   encoding: unicode
-  database: rails_dev
+  database: utech_dev
   username: rails_user
   host: db
   password: gravn3da
@@ -22,8 +22,8 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: rails_test
+  database: utech_test
 
 production:
   <<: *default
-  database: rails_production
+  database: utech_production
