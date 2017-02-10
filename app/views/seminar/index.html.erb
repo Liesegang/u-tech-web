@@ -1,2 +1,8 @@
-<h1>Seminar#index</h1>
-<p>Find me in app/views/seminar/index.html.erb</p>
+<h1>Seminar List</h1>
+
+
+<ul style="list-style-type: square">
+	<% @seminars.each do |s| %>
+		<li><%= s.name %></li>
+	<% end %>
+</ul>
