@@ -14,7 +14,7 @@ development:
   encoding: unicode
   database: rails_dev
   username: rails_user
-  host: localhost
+  host: db
   password: gravn3da
 
 # Warning: The database defined as "test" will be erased and
@@ -22,8 +22,8 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: db/test.sqlite3
+  database: rails_test
 
 production:
   <<: *default
-  database: db/production.sqlite3
+  database: rails_production
