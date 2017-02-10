@@ -1,0 +1,2 @@
+class SeminarDatetime < ApplicationRecord
+end
