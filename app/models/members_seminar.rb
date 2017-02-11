@@ -1,0 +1,2 @@
+class MembersSeminar < ApplicationRecord
+end

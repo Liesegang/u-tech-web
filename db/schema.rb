@@ -10,10 +10,29 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170210160042) do
+ActiveRecord::Schema.define(version: 20170210174103) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "members", force: :cascade do |t|
+    t.string   "first_name", limit: 20, null: false
+    t.string   "last_name",  limit: 20, null: false
+    t.string   "email",                 null: false
+    t.string   "university",            null: false
+    t.integer  "grade",      limit: 2,  null: false
+    t.datetime "created_at",            null: false
+    t.datetime "updated_at",            null: false
+    t.index ["email"], name: "index_members_on_email", using: :btree
+  end
+
+  create_table "members_seminars", force: :cascade do |t|
+    t.integer  "member_id",  null: false
+    t.integer  "seminar_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["member_id", "seminar_id"], name: "index_members_seminars_on_member_id_and_seminar_id", unique: true, using: :btree
+  end
 
   create_table "seminar_datetimes", force: :cascade do |t|
     t.datetime "ancestor",   null: false
@@ -24,6 +43,25 @@ ActiveRecord::Schema.define(version: 20170210160042) do
     t.index ["seminar_id"], name: "index_seminar_datetimes_on_seminar_id", using: :btree
   end
 
+  create_table "seminar_descs", force: :cascade do |t|
+    t.text     "desc",       null: false
+    t.integer  "seminar_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["seminar_id"], name: "index_seminar_descs_on_seminar_id", using: :btree
+  end
+
+  create_table "seminar_docs", force: :cascade do |t|
+    t.string   "title",      null: false
+    t.text     "desc",       null: false
+    t.text     "url",        null: false
+    t.integer  "seminar_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["seminar_id"], name: "index_seminar_docs_on_seminar_id", using: :btree
+    t.index ["title"], name: "index_seminar_docs_on_title", using: :btree
+  end
+
   create_table "seminars", force: :cascade do |t|
     t.string   "name",       null: false
     t.datetime "created_at", null: false
@@ -31,5 +69,5 @@ ActiveRecord::Schema.define(version: 20170210160042) do
     t.index ["name"], name: "index_seminars_on_name", using: :btree
   end
 
-  add_foreign_key "seminar_datetimes", "seminars"
 end
+
