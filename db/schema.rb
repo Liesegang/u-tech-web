@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170210174103) do
+ActiveRecord::Schema.define(version: 20170211140702) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -35,11 +35,13 @@ ActiveRecord::Schema.define(version: 20170210174103) do
   end
 
   create_table "seminar_datetimes", force: :cascade do |t|
-    t.datetime "ancestor",   null: false
-    t.datetime "descendent", null: false
-    t.integer  "seminar_id", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "anc_start_time", null: false
+    t.datetime "des_start_time", null: false
+    t.integer  "seminar_id",     null: false
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+    t.datetime "anc_end_time",   null: false
+    t.datetime "des_end_time",   null: false
     t.index ["seminar_id"], name: "index_seminar_datetimes_on_seminar_id", using: :btree
   end
 
@@ -70,4 +72,3 @@ ActiveRecord::Schema.define(version: 20170210174103) do
   end
 
 end
-
