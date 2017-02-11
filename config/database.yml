@@ -9,13 +9,13 @@ default: &default
   pool: 5
   timeout: 5000
   encoding: unicode
-  username: rails_user
-  host: db
-  password: gravn3da
 
 development:
   <<: *default
   database: utech_dev
+  username: rails_user
+  host: db
+  password: gravn3da
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -23,6 +23,9 @@ development:
 test:
   <<: *default
   database: utech_test
+  username: rails_user
+  host: db
+  password: gravn3da
 
 production:
   <<: *default
