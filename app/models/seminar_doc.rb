@@ -1,0 +1,2 @@
+class SeminarDoc < ApplicationRecord
+end
