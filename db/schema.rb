@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170213121313) do
+ActiveRecord::Schema.define(version: 20170217074616) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -52,13 +52,13 @@ ActiveRecord::Schema.define(version: 20170213121313) do
   end
 
   create_table "seminar_docs", force: :cascade do |t|
-    t.string   "title",      null: false
-    t.text     "desc",       null: false
-    t.text     "url",        null: false
-    t.integer  "seminar_id", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["seminar_id"], name: "index_seminar_docs_on_seminar_id", using: :btree
+    t.string   "title",               null: false
+    t.text     "desc",                null: false
+    t.text     "url",                 null: false
+    t.integer  "seminar_datetime_id", null: false
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
+    t.index ["seminar_datetime_id"], name: "index_seminar_docs_on_seminar_datetime_id", using: :btree
     t.index ["title"], name: "index_seminar_docs_on_title", using: :btree
   end
 
@@ -71,5 +71,5 @@ ActiveRecord::Schema.define(version: 20170213121313) do
 
   add_foreign_key "seminar_datetimes", "seminars"
   add_foreign_key "seminar_descs", "seminars"
-  add_foreign_key "seminar_docs", "seminars"
+  add_foreign_key "seminar_docs", "seminars", column: "seminar_datetime_id"
 end
