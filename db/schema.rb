@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170318090054) do
+ActiveRecord::Schema.define(version: 20170318091935) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -45,6 +45,14 @@ ActiveRecord::Schema.define(version: 20170318090054) do
     t.index ["event_id"], name: "index_event_long_descs_on_event_id", using: :btree
   end
 
+  create_table "event_short_descs", force: :cascade do |t|
+    t.text     "desc",       null: false
+    t.integer  "event_id",   null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["event_id"], name: "index_event_short_descs_on_event_id", using: :btree
+  end
+
   create_table "events", force: :cascade do |t|
     t.string   "name",       null: false
     t.datetime "created_at", null: false
@@ -74,4 +82,5 @@ ActiveRecord::Schema.define(version: 20170318090054) do
   add_foreign_key "event_datetimes", "events"
   add_foreign_key "event_docs", "events"
   add_foreign_key "event_long_descs", "events"
+  add_foreign_key "event_short_descs", "events"
 end

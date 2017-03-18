@@ -1,0 +1,2 @@
+class EventShortDesc < ApplicationRecord
+end
