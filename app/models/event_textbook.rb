@@ -1,0 +1,2 @@
+class EventTextbook < ApplicationRecord
+end
