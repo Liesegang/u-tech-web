@@ -1,14 +1,12 @@
 Rails.application.routes.draw do
 
-  get 'event/index'
-
   get 'event/show'
 
   root to: 'static_pages#home'
 
   get '/about', to: 'static_pages#about'
   get '/welcome', to: 'static_pages#welcome'
-  get '/event', to: 'static_pages#event'
+  get '/event', to: 'event#index'
   get '/join', to: 'static_pages#join'
   get '/contact', to: 'static_pages#contact'
 
