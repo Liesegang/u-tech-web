@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170318130908) do
+ActiveRecord::Schema.define(version: 20170318155357) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 20170318130908) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.datetime "end_time",   null: false
+    t.string   "title",      null: false
     t.index ["event_id"], name: "index_event_datetimes_on_event_id", using: :btree
   end
 
@@ -35,12 +36,31 @@ ActiveRecord::Schema.define(version: 20170318130908) do
     t.index ["title"], name: "index_event_docs_on_title", using: :btree
   end
 
+  create_table "event_infos", force: :cascade do |t|
+    t.string   "message",    null: false
+    t.datetime "due",        null: false
+    t.integer  "event_id",   null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["event_id"], name: "index_event_infos_on_event_id", using: :btree
+  end
+
   create_table "event_long_descs", force: :cascade do |t|
     t.text     "desc",       null: false
     t.integer  "event_id",   null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["event_id"], name: "index_event_long_descs_on_event_id", using: :btree
+  end
+
+  create_table "event_schedules", force: :cascade do |t|
+    t.time     "start_time", null: false
+    t.time     "end_time",   null: false
+    t.string   "day",        null: false
+    t.integer  "event_id",   null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["event_id"], name: "index_event_schedules_on_event_id", using: :btree
   end
 
   create_table "event_short_descs", force: :cascade do |t|
@@ -88,7 +108,9 @@ ActiveRecord::Schema.define(version: 20170318130908) do
 
   add_foreign_key "event_datetimes", "events"
   add_foreign_key "event_docs", "events"
+  add_foreign_key "event_infos", "events"
   add_foreign_key "event_long_descs", "events"
+  add_foreign_key "event_schedules", "events"
   add_foreign_key "event_short_descs", "events"
   add_foreign_key "event_textbooks", "events"
 end
