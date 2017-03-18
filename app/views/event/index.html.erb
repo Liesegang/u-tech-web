@@ -10,11 +10,7 @@
 
 			<div class="content event-now">
 				<h2>開催中のイベント</h2>
-				<div class="events">
-					<% @sessions.each do |event| %>
-						<%= render partial: "partials/event", locals: { event: event } %>
-					<% end %>
-				</div>
+				<%= render partial: "partials/events", locals: { events: @sessions } %>
 			</div>
 
 			<div class="content event-done">
