@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+  get 'event/index'
+
+  get 'event/show'
+
   root to: 'static_pages#home'
 
   get '/about', to: 'static_pages#about'
