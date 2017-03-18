@@ -86,7 +86,7 @@ ActiveRecord::Schema.define(version: 20170318164153) do
     t.datetime "updated_at", null: false
     t.integer  "year",       null: false
     t.string   "kind",       null: false
-    t.date     "stard_date", null: false
+    t.date     "start_date", null: false
     t.date     "end_date",   null: false
     t.string   "image",      null: false
     t.index ["name"], name: "index_events_on_name", using: :btree
