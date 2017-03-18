@@ -20,3 +20,11 @@ EventSchedule.create(event_id: 1, day: "火曜", start_time: "16:00", end_time: 
 EventSchedule.create(event_id: 2, day: "木，日曜", start_time: "16:00", end_time: "19:00")
 EventSchedule.create(event_id: 3, day: "日曜", start_time: "9:00", end_time: "12:00")
 EventSchedule.create(event_id: 4, day: "水曜", start_time: "9:00", end_time: "12:00")
+
+
+EventShortDesc.destroy_all
+
+EventShortDesc.create(event_id: 1, desc: "Rubyのプロが書いたコードを読んで，良いコードの書き方を学ぼう！題材にはRuby on RailsのActive Modelとそれに関わるコードを使用します。毎回担当者を決めて，Railsのコードを輪読していきます．")
+EventShortDesc.create(event_id: 2, desc: "前半は機械学習とDeep Learningの基礎理論について学習し，後半は自然言語処理を用いた簡単なアプリケーションを製作します．")
+EventShortDesc.create(event_id: 3, desc: "「線形代数の世界(抽象数学への入り口)」を読み進めていく自主ゼミです．内容は線形写像や線形空間からテンソル積，群，位相空間などです．")
+EventShortDesc.create(event_id: 1, desc: "「集合と位相」を読み進めていく自主ゼミです．内容はなどです．")
