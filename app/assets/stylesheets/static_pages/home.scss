@@ -1,0 +1,40 @@
+.home {
+	.visual {
+		background-image: url("/assets/home/background.png");
+		width: 100%;
+		overflow: hidden;
+		position: relative;
+		z-index: 0;
+		margin-bottom: 60px;
+
+		img {
+			display: block;
+			width: 400px;
+			margin: auto;
+		}
+
+		p {
+			text-align: center;
+			color: #eee;
+			font-size: 1.5rem;
+			margin: 0;
+			padding: 0;
+			margin-top: 0px;
+			padding-bottom: 20px;
+		}
+	}
+
+	.visual:before {
+		content: '';
+		background-image: inherit;
+		background-size: cover;
+		width: 120%;
+		height: 250%;
+		position: absolute;
+		top: -100%;
+		left: -10%;
+		transform-origin: left center;
+		transform: rotate(5deg);
+		z-index: -1;
+	}
+}
