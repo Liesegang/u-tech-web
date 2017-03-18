@@ -10,7 +10,7 @@ Event.destroy_all
 
 Event.create(name: "Rails Code Reading", year: 2017, kind: "春休み情報ゼミ", start_date: '2017-02-07', end_date: '2017-03-28', image: "rails_code_reading.png", id: 1)
 Event.create(name: "機械学習(Deep Learning)勉強会", year: 2017, kind: "春休み情報ゼミ", start_date: '2017-02-02', end_date: '2017-03-30', image: "deep_learning.png", id: 2)
-Event.create(name: "線形代数", year: 2017, kind: "春休み数学ゼミ", start_date: '2017-02-05', end_date: '2017-03-26', image: "linear_algebra.png", id: 3)
+Event.create(name: "線形代数", year: 2017, kind: "春休み数学ゼミ", start_date: '2017-02-05', end_date: '2017-03-26', image: "linear_algebra.jpg", id: 3)
 Event.create(name: "集合と位相", year: 2017, kind: "春休み数学ゼミ", start_date: '2017-02-08', end_date: '2017-03-29', image: "sets_and_topology.jpg", id: 4)
 Event.create(name: "数理論理学", year: 2017, kind: "春休み数学ゼミ", start_date: '2017-02-17', end_date: '2017-03-31', image: "theory.jpg", id: 5)
 
