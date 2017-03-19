@@ -14,5 +14,5 @@ class Event < ApplicationRecord
 	scope :in_session, -> { where("(start_date <= ?) AND (end_date >= ?)", Date.today, Date.today) }
 	scope :in_end, -> { where("end_date < ?", Date.today) }
 
-	scope :sort_soon, ->　{ order(start_date: :asc) }
+	scope :sort_soon, -> { order(start_date: :asc) }
 end
