@@ -1,33 +1,51 @@
 html, body {
 	margin: 0;
 	padding: 0;
-	font-family: sans-serif;
+}
+
+html {
+	font-size: 100%;
+ 	font-family: sans-serif;
+
+	/* 16px @ 480px increasing to 32px @ 1920px */
+	@media (min-width: 480px) {
+		font-size: calc(30px + ((0.5vw - 4.8px) * 1.1111));
+	    /* Where: * 1.1111 = 100 * font_Size_Difference / viewport_Width_Difference */
+	}
+	/* Prevent font scaling beyond this breakpoint */
+	@media (min-width: 1920px) {
+		font-size: 32px;
+	}
+}
+
+body {
+	font-size: 0.5rem;
 }
 
 .contents {
-	width: 70%;
+	width: 80%;
 	margin: auto;
 }
 
 .content {
 	width: 90%;
 	margin: auto;
-	margin-bottom: 60px;
+	margin-bottom: 5vh;
 }
 
 h1 {
-	font-size: 2.0rem;
+	font-size: 1.2rem;
 	border-top: 1px solid #333;
 	border-bottom: 1px solid #333;
-	padding-left: 20px;
-	margin-bottom: 50px;
+	padding-left: 2vw;
+	margin-bottom: 5vh;
 }
 
 h2 {
-	font-size: 1.5rem;
-	margin: 0 0 30px 30px;
+	font-size: 0.7rem;
+	margin: 0 0 2vh 30px;
 	padding: 5px;
-	padding-left: 10px;
+	padding-left: 1vw;
 	position: relative;
 	border-top: 1px solid #333;
 	border-right: 1px solid #333;
@@ -49,23 +67,23 @@ h2:before {
 }
 
 p {
-	margin-left: 60px;
+	margin-left: 3vw;
 }
 
 ul {
-	margin-left: 60px;
+	margin-left: 3vw;
 }
 
 li {
-	font-size: 1.2rem;
+	font-size: 0.5rem;
 }
 
 dl {
-	margin-left: 60px;
+	margin-left: 3vw;
 }
 
 header {
-	margin: 30px 0;
+	margin: 3vh 0;
 }
 
 nav {
@@ -85,13 +103,12 @@ nav {
 	    li {
 			text-align: center;
 		    list-style: none;
-		    font-size: 1.0rem;
 		    height: 25px;
-		    width: 120px;
+		    width: 130px;
 		    float: left;
 
 		    a {
-				size: 10rem;
+				font-size: 0.6rem;
 				margin: 10px;
 			    color: #333;
 			    text-decoration: none;
@@ -111,6 +128,6 @@ nav {
 footer {
 	clear: both;
 	text-align: center;
-	size: 10rem;
+	font-size: 0.5rem;
 	color: #666;
 }

@@ -1,2 +1,0 @@
-class SeminarDesc < ApplicationRecord
-end

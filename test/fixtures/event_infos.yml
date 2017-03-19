@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  message: MyString
+  due: 2017-03-18 15:53:57
+
+two:
+  message: MyString
+  due: 2017-03-18 15:53:57

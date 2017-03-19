@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class SeminarTest < ActiveSupport::TestCase
+class EventDatetimeTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

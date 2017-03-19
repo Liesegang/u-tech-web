@@ -1,2 +1,0 @@
-class SeminarDatetime < ApplicationRecord
-end

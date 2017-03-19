@@ -1,0 +1,59 @@
+.event-tips {
+	display: flex;
+	flex-wrap: wrap;
+
+	.event-tip {
+		width: 22%;
+		padding: 0 1%;
+		margin-bottom: 30px;
+
+		//画像を正方形でくり抜く
+		.event-tip-image-wrapper{
+			position: relative;
+    		width: 100%;
+
+			.event-tip-image {
+				overflow: hidden;
+
+				position: absolute;
+			    top: 0;
+			    left: 0;
+			    bottom: 0;
+			    right: 0;
+
+				img{
+					width: 100%;
+				}
+			}
+		}
+
+		.event-tip-image-wrapper:before {
+		    content:"";
+		    display: block;
+		    padding-top: 100%;
+		}
+
+		.event-tip-kind {
+			padding: 0 5px;
+			font-size: 0.4rem;
+			color: #888;
+		}
+
+		.event-tip-title {
+			padding: 0 5px;
+			font-size: 0.6rem;
+		}
+
+		.event-tip-daytime {
+			padding: 0 5px;
+			padding-top: 5px;
+			font-size: 0.5rem;
+			text-align: right;
+		}
+
+		.event-tip-desc {
+			padding: 0 5px;
+			padding-top: 10px;
+		}
+	}
+}

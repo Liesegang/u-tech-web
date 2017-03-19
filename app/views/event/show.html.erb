@@ -1,0 +1,59 @@
+<div class="container">
+	<div class="event-show">
+		<div class="contents">
+			<h1><%= @event.name %></h1>	
+			<div class="content event_show_header">
+				<div class="event_show_kind"><%= @event.year %> <%= @event.kind %></div>
+				<div class="event_show_daytime">
+					<%= @event.event_schedule.day %> 
+					<%= @event.event_schedule.start_time.to_s(:time2) %>
+					〜
+					<%= @event.event_schedule.end_time.to_s(:time2) %>
+				</div>
+			</div>
+
+			<% unless @event.event_infos.nil? || @event.event_infos.empty? %>
+				<div class="content event_show_info">
+					<h2>お知らせ</h2>
+					<ul>
+						<% @event.event_infos.each do |i| %>
+							<li><%= i.message %></li>
+						<% end %>
+					</ul>
+				</div>
+			<% end %>
+
+			<% unless @event.event_long_desc.nil? %>
+				<div class="content event_show_description">
+					<h2>イベント詳細</h2>
+					<p><%= @event.event_long_desc.desc %></p>
+				</div>
+			<% end %>
+
+			<% unless @event.event_textbooks.nil? || @event.event_textbooks.empty? %>
+				<div class="content event_show_description">
+					<h2>使用する教科書，参考書</h2>
+					<ul>
+						<% @event.event_textbooks.each do |t| %>
+							<li><%= link_to t.title, t.url %></li>
+						<% end %>
+					</ul>
+				</div>
+			<% end %>
+
+			<% unless @event.event_datetimes.nil? || @event.event_datetimes.empty? %>
+				<div class="content event_show_datetime">
+					<h2>日程</h2>
+					<ul>
+						<% i = 1 %>
+						<% @event.event_datetimes.each do |d| %>
+							<li><%= "第" + i.to_s + "回" %> <%= d.start_time.to_s(:date2) %> <%= d.title %></li>
+							<% i += 1 %>
+						<% end %>
+					</ul>
+				</div>
+			<% end %>
+
+		</div>
+	</div>
+</div>
