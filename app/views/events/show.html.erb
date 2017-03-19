@@ -54,6 +54,22 @@
 				</div>
 			<% end %>
 
+			<% unless @event.event_docs.nil? || @event.event_docs.empty? %>
+				<div class="content event_show_docs">
+					<h2>資料</h2>
+					<ul>
+						<% @event.event_docs.each do |d| %>
+							<li>
+								<a href="<%= d.url %>"><%= d.title %></a>
+								<% unless d.desc.empty? %>
+									<p><%= d.desc %></p>
+								<% end %>
+							</li>
+						<% end %>
+					</ul>
+				</div>
+			<% end %>
+
 		</div>
 	</div>
 </div>
