@@ -2,7 +2,7 @@
 	<a href="<%= event_path(event) %>">
 		<div class="event-tip-image-wrapper">
 			<div class="event-tip-image">
-				<img src="/assets/events/<%= event.image %>">
+				<img src="<%= asset_path ('events/' + event.image) %>">
 			</div>
 		</div>
 		<div class="event-tip-kind">
