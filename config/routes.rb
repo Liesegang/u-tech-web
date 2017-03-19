@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
 
-  get 'event/show'
-
   root to: 'static_pages#home'
+
+  get '/event/:id', to: 'event#show'
 
   get '/about', to: 'static_pages#about'
   get '/welcome', to: 'static_pages#welcome'
