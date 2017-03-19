@@ -1,4 +1,4 @@
-class EventController < ApplicationController
+class EventsController < ApplicationController
   def index
   	@wanteds = Event.in_wanted.sort_soon.take(20)
   	@sessions = Event.in_session.sort_soon.take(20)
