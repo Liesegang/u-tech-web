@@ -2,19 +2,34 @@
 	<div class="event">
 		<div class="contents">
 			<h1>イベント</h1>	
+			
 			<div class="content event-soon">
 				<h2>募集中のイベント</h2>
+				<% if @wanteds.nil? || @wanteds.empty? %>
+					<p>募集中のイベントはありません</p>
+				<% else %>
+					<%= render partial: "partials/events", locals: { events: @wanteds } %>
+				<% end %>
 				<div class="events">
 				</div>
 			</div>
 
 			<div class="content event-now">
 				<h2>開催中のイベント</h2>
-				<%= render partial: "partials/events", locals: { events: @sessions } %>
+				<% if @sessions.nil? || @sessions.empty? %>
+					<p>開催中のイベントはありません</p>
+				<% else %>
+					<%= render partial: "partials/events", locals: { events: @sessions } %>
+				<% end %>
 			</div>
 
 			<div class="content event-done">
 				<h2>終了したのイベント</h2>
+				<% if @ends.nil? || @ends.empty? %>
+					<p>終了したイベントはありません</p>
+				<% else %>
+					<%= render partial: "partials/events", locals: { events: @ends } %>
+				<% end %>
 			</div>
 
 		</div>
