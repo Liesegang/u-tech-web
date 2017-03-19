@@ -3,6 +3,7 @@
 		<div class="contents">
 			<h1><%= @event.name %></h1>	
 			<div class="content event_show_header">
+				<img src="<%= asset_path 'events/' + @event.image %>">
 				<div class="event_show_kind"><%= @event.year %> <%= @event.kind %></div>
 				<div class="event_show_daytime">
 					<%= @event.event_schedule.day %> 

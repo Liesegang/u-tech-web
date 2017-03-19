@@ -1,0 +1,17 @@
+.event-show {
+	.event_show_header {
+		overflow: hidden;
+
+		img {
+			width: 20vw;
+			float: left;
+			display: block;
+			margin-right: 1vw;
+		}
+
+		.event_show_kind, .event_show_daytime{
+			padding: 0;
+			padding-top: 1vh;
+		}
+	}
+}
