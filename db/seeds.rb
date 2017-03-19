@@ -54,3 +54,9 @@ EventDatetime.create(event_id: 1, start_time: "2017-02-14 16:00", end_time: "201
 EventDatetime.create(event_id: 1, start_time: "2017-02-21 16:00", end_time: "2017-02-21 19:00", title: "DecendantsTracker,Callbacks")
 EventDatetime.create(event_id: 1, start_time: "2017-02-28 16:00", end_time: "2017-02-28 19:00", title: "Conversion,HashWithIndifferentAccess,Dirty")
 EventDatetime.create(event_id: 1, start_time: "2017-03-07 16:00", end_time: "2017-03-07 19:00", title: "Errors,Deprecation,ForbiddenAttributesProtection,I18n")
+
+
+EventDoc.destroy_all
+
+EventDoc.create(event_id: 1, title: "Git資料", desc: "gitにあげてあるみんなで書いてる資料", url: "https://github.com/Kazuuuuuki/utech-Rails-reading")
+EventDoc.create(event_id: 2, title: "Git資料", desc: "gitにあげてある資料", url: "https://github.com/Kazuuuuuki/uTech-TensorFlow")
