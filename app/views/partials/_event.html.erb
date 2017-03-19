@@ -1,13 +1,16 @@
 <div class="event-tip">
-	<div class="event-tip-image-wrapper">
-		<div class="event-tip-image">
-			<img src="/assets/events/<%= event.image %>">
+	<a href="<%= event_path(event) %>">
+		<div class="event-tip-image-wrapper">
+			<div class="event-tip-image">
+				<img src="/assets/events/<%= event.image %>">
+			</div>
 		</div>
-	</div>
-	<div class="event-tip-kind">
-		<%= event.year %> <%= event.kind %>
-		</div>
-	<div class="event-tip-title"><%= event.name %></div>
+		<div class="event-tip-kind">
+			<%= event.year %> <%= event.kind %>
+			</div>
+		<div class="event-tip-title"><%= event.name %></div>
+	</a>
+	
 	<% unless event.event_schedule.nil? %>
 		<div class="event-tip-daytime">
 			<%= event.event_schedule.day %> 
