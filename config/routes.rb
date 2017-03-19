@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   root to: 'static_pages#home'
 
   resources :events, only: [:index, :show]
+  resources :members
 
   get '/about', to: 'static_pages#about'
   get '/welcome', to: 'static_pages#welcome'
