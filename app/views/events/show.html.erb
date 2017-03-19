@@ -12,21 +12,21 @@
 				</div>
 			</div>
 
-			<% unless @event.event_infos.nil? || @event.event_infos.empty? %>
-				<div class="content event_show_info">
-					<h2>お知らせ</h2>
-					<ul>
-						<% @event.event_infos.each do |i| %>
-							<li><%= i.message %></li>
-						<% end %>
-					</ul>
-				</div>
-			<% end %>
-
 			<% unless @event.event_long_desc.nil? %>
 				<div class="content event_show_description">
 					<h2>イベント詳細</h2>
 					<p><%= @event.event_long_desc.desc %></p>
+				</div>
+			<% end %>
+
+			<% unless @event.info_now.nil? || @event.info_now.empty? %>
+				<div class="content event_show_info_now">
+					<h2>お知らせ</h2>
+					<ul>
+						<% @event.info_now.sort_old.each do |i| %>
+							<li><%= i.due.to_s(:date2) %> <%= i.message %></li>
+						<% end %>
+					</ul>
 				</div>
 			<% end %>
 
@@ -65,6 +65,17 @@
 									<p><%= d.desc %></p>
 								<% end %>
 							</li>
+						<% end %>
+					</ul>
+				</div>
+			<% end %>
+
+			<% unless @event.info_old.nil? || @event.info_old.empty? %>
+				<div class="content event_show_info_old">
+					<h2>過去のお知らせ</h2>
+					<ul>
+						<% @event.info_old.sort_new.each do |i| %>
+							<li><%= i.message %></li>
 						<% end %>
 					</ul>
 				</div>

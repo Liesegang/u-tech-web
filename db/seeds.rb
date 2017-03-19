@@ -60,3 +60,8 @@ EventDoc.destroy_all
 
 EventDoc.create(event_id: 1, title: "Git資料", desc: "gitにあげてあるみんなで書いてる資料", url: "https://github.com/Kazuuuuuki/utech-Rails-reading")
 EventDoc.create(event_id: 2, title: "Git資料", desc: "gitにあげてある資料", url: "https://github.com/Kazuuuuuki/uTech-TensorFlow")
+
+
+EventInfo.destroy_all
+
+EventInfo.create(event_id: 1, message: "次回は3/21に学生会館で行います", due: "2017-3-21 19:00")

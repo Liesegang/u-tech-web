@@ -15,4 +15,12 @@ class Event < ApplicationRecord
 	scope :in_end, -> { where("end_date < ?", Date.today) }
 
 	scope :sort_soon, -> { order(start_date: :asc) }
+
+	def info_now
+		self.event_infos.now
+	end
+
+	def info_old
+		self.event_infos.old
+	end
 end
