@@ -1,2 +1,21 @@
-<h1>Sessions#new</h1>
-<p>Find me in app/views/sessions/new.html.erb</p>
+<div class="container">
+	<div class="login">
+		<div class="contents">
+			<% provide(:title, "Log in") %>
+			<h1>ログイン</h1>
+			<%= form_for(:session, url: login_path) do |f| %>
+
+				<%= f.label :email %>
+				<%= f.email_field :email, class: 'form-control' %>
+
+				<%= f.label :password %>
+				<%= f.password_field :password, class: 'form-control' %>
+
+				<%= f.submit "Log in" %>
+
+			<% end %>
+
+			<p>新規メッンバーの登録は <%= link_to "こちら", new_member_path %></p>
+		</div>
+	</div>
+</div>
