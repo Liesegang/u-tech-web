@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
 		if member && member.authenticate(params[:session][:password])
 			# ユーザーログイン後にユーザー情報のページにリダイレクトする
 			log_in member
-			redirect_to membmer
+			redirect_to current_member
 		else
 			# エラーメッセージを作成する
 			flash.now[:danger] = 'メールアドレスまたはパスワードが間違っています'
