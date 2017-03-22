@@ -37,7 +37,7 @@ EventShortDesc.create(event_id: 2, desc: "前半は機械学習とDeep Learning�
 EventShortDesc.create(event_id: 3, desc: "「線形代数の世界(抽象数学への入り口)」を読み進めていく自主ゼミです．内容は線形写像や線形空間からテンソル積，群，位相空間などです．")
 EventShortDesc.create(event_id: 4, desc: "「集合と位相」を読み進めていく自主ゼミです．内容は距離空間，位相空間，完備距離空間などをやります．")
 EventShortDesc.create(event_id: 5, desc: "「数理論理学」を読み進めていく自主ゼミです．内容は一回命題論理と一階述語論理などです．")
-EventShortDesc.create(event_id: 6, desc: "「マスタリングTCP/IP 入門編」を読み進めていく自主ゼミです．内容はなどです．")
+EventShortDesc.create(event_id: 6, desc: "「マスタリングTCP/IP 入門編」を読み進めていく自主ゼミです．内容はネットワーク，TCP/IP，セキュリティーなどです．")
 EventShortDesc.create(event_id: 7, desc: "「代数学1 群と環」を読み進めていく自主ゼミです．群論の基礎を学びます．")
 EventShortDesc.create(event_id: 8, desc: "「The Art of Computer Programming Volume1 Fundamental Algorithms」を読み進めていく自主ゼミです．コンピューターサイエンスを将来的に専門にしたい人必読の本です．")
 
