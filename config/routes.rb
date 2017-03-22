@@ -1,11 +1,13 @@
 Rails.application.routes.draw do
 
-  get 'sessions/new'
-
   root to: 'static_pages#home'
 
   resources :events, only: [:index, :show]
   resources :members
+
+  get 'contacts/index'
+  post 'contacts/confirm'
+  post 'contacts/thanks'
 
   get    'login'   => 'sessions#new'
   post   'login'   => 'sessions#create'
