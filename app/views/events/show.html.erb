@@ -1,6 +1,7 @@
-<div class="container">
-	<div class="event-show">
-		<div class="contents">
+<div class="event-show">
+	<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-8 col-md-offset-2 col-xs-12">
 			<h1><%= @event.name %></h1>	
 			<div class="content event_show_header">
 				<img src="<%= asset_path 'events/' + @event.image %>">
@@ -81,7 +82,7 @@
 					</ul>
 				</div>
 			<% end %>
-
 		</div>
+	</div>
 	</div>
 </div>
