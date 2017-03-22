@@ -4,66 +4,34 @@ html, body {
 }
 
 html {
-	font-size: 100%;
  	font-family: sans-serif;
-
-	/* 16px @ 480px increasing to 32px @ 1920px */
-	@media (min-width: 480px) {
-		font-size: calc(30px + ((0.5vw - 4.8px) * 1.1111));
-	    /* Where: * 1.1111 = 100 * font_Size_Difference / viewport_Width_Difference */
-	}
-	/* Prevent font scaling beyond this breakpoint */
-	@media (min-width: 1920px) {
-		font-size: 32px;
-	}
 }
 
 body {
-	font-size: 0.5rem;
-}
-
-.contents {
-	width: 80%;
-	margin: auto;
+	font-size: 1.5rem;
 }
 
 .content {
-	width: 90%;
-	margin: auto;
-	margin-bottom: 5vh;
+	margin-bottom: 6vh;
+
+	h2 {
+		margin-bottom: 3vh;
+	}
 }
 
 h1 {
-	font-size: 1.2rem;
 	border-top: 1px solid #333;
 	border-bottom: 1px solid #333;
+	padding: 1vw 0;
 	padding-left: 2vw;
 	margin-bottom: 5vh;
 }
 
 h2 {
-	font-size: 0.7rem;
-	margin: 0 0 2vh 30px;
-	padding: 5px;
-	padding-left: 1vw;
-	position: relative;
-	border-top: 1px solid #333;
-	border-right: 1px solid #333;
-	border-bottom: 1px solid #333;
-	display: block;
-}
-
-h2:before {
-	content: "";
-	background-color: #2196F3;
-	width: 30px;
-	height: 100%;
-	position: absolute;
-	left: -30px;
-	top: -1px;
-	border-top: 1px solid #333;
-	border-left: 1px solid #333;
-	border-bottom: 1px solid #333;
+	border-left: 20px solid $clr-orange-900;
+	background-color: $clr-blue-grey-900;
+	color: white;
+	padding: 10px;
 }
 
 p {
@@ -75,7 +43,6 @@ ul {
 }
 
 li {
-	font-size: 0.5rem;
 }
 
 dl {
@@ -108,7 +75,7 @@ nav {
 		    float: left;
 
 		    a {
-				font-size: 0.5rem;
+				font-size: 1.8rem;
 				margin: 10px;
 			    color: #333;
 			    text-decoration: none;
@@ -128,6 +95,5 @@ nav {
 footer {
 	clear: both;
 	text-align: center;
-	font-size: 0.5rem;
 	color: #666;
 }
