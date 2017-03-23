@@ -18,7 +18,7 @@
           <li><%= link_to "新歓情報", welcome_path %></li>
           <li><%= link_to "イベント", events_path %></li>
           <li><%= link_to "メンバー登録", join_path %></li>
-          <li><%= link_to "お問い合わせ", contact_path %></li>
+          <li><%= link_to "お問い合わせ", contacts_index_path %></li>
           <% if logged_in? %>
             <li><%= link_to "Log out", logout_path, method: "delete" %></li>
           <% else %>

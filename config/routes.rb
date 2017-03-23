@@ -1,11 +1,13 @@
 Rails.application.routes.draw do
 
-  get 'sessions/new'
-
   root to: 'static_pages#home'
 
   resources :events, only: [:index, :show]
   resources :members
+
+  get 'contacts/index'
+  post 'contacts/confirm'
+  post 'contacts/thanks'
 
   get    'login'   => 'sessions#new'
   post   'login'   => 'sessions#create'
@@ -14,7 +16,6 @@ Rails.application.routes.draw do
   get '/about'   => 'static_pages#about'
   get '/welcome' => 'static_pages#welcome'
   get '/join'    => 'members#new'
-  get '/contact' => 'static_pages#contact'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
