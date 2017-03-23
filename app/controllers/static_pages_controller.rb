@@ -1,5 +1,6 @@
 class StaticPagesController < ApplicationController
   def home
+    @wanteds = Event.in_wanted.sort_soon.take(20)
   end
 
   def about

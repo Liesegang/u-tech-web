@@ -1,5 +1,6 @@
 class Member < ApplicationRecord
-	has_and_belongs_to_many :events
+	has_many :participations
+	has_many :events, through: :participations, dependent: :destroy
 
 	before_save { self.email = email.downcase }
 	validates :nickname, presence: true, length: { maximum: 50 }

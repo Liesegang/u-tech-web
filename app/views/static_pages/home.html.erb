@@ -18,7 +18,11 @@
 
 			<div class="content home-new-seminars">
 				<h2>春学期ゼミ メンバー募集！</h2>
-				<p></p>
+				<% if @wanteds.nil? || @wanteds.empty? %>
+					<p>募集中のイベントはありません</p>
+				<% else %>
+					<%= render partial: "partials/events", locals: { events: @wanteds } %>
+				<% end %>
 		</div>
 	</div>
 	</div>
