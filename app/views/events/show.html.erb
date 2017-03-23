@@ -4,14 +4,23 @@
 		<div class="col-md-8 col-md-offset-2 col-xs-12">
 			<h1><%= @event.name %></h1>	
 			<div class="content event_show_header">
-				<img src="<%= asset_path 'events/' + @event.image %>">
-				<div class="event_show_kind"><%= @event.year %> <%= @event.kind %></div>
-				<div class="event_show_daytime">
-					<%= @event.event_schedule.day %> 
-					<%= @event.event_schedule.start_time.to_s(:time2) %>
-					〜
-					<%= @event.event_schedule.end_time.to_s(:time2) %>
-				</div>
+				<div class="row">
+					<div class="col-md-4">
+						<div class="event_show_image">
+							<img src="<%= asset_path 'events/' + @event.image %>">
+						</div>
+					</div>
+					<div class="col-md-8">
+						<div class="event_show_kind"><%= @event.year %> <%= @event.kind %></div>
+						<div class="event_show_daytime">
+							<%= @event.event_schedule.day %> 
+							<%= @event.event_schedule.start_time.to_s(:time2) %>
+							〜
+							<%= @event.event_schedule.end_time.to_s(:time2) %>
+						</div>
+
+						<a href="#" class="btn btn-primary pull-right">イベントに参加</a>
+					</div>
 			</div>
 
 			<% unless @event.event_long_desc.nil? %>
