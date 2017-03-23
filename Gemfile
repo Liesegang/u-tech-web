@@ -38,6 +38,9 @@ gem 'pg', '>= 0.19.0'
 # use bootstrap
 gem 'bootstrap-sass'
 
+# Use autoprefixer
+gem "autoprefixer-rails"
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
