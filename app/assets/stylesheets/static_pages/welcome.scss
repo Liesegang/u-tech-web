@@ -1,28 +1,35 @@
 .welcome {
-}
 
-.welcome-schedule dl {
-	width: 100%;
-}
+	.welcome-schedule dl {
+		width: 100%;
+	}
 
-.welcome-schedule dt {
-	margin-bottom: 1vh;
-	float: left;
-	clear: left;
-	width: 100px;
-}
+	.welcome-schedule dt {
+		margin-bottom: 1vh;
+		float: left;
+		clear: left;
+		width: 100px;
+	}
 
-.welcome-schedule dd {
-	float: left;
-}
+	.welcome-schedule dd {
+		float: left;
+	}
 
-.welcome-schedule .place {
-}
+	.welcome-schedule .place {
+	}
 
-.welcome-schedule .time {
-	width: 120px;
-}
+	.welcome-schedule .time {
+		width: 120px;
+	}
 
-.welcome-schedule p{
-	clear: both;
+	.welcome-schedule p{
+		clear: both;
+	}
+
+	.welcome-map {
+		img {
+			width: 100%;
+		}
+	}
+
 }
