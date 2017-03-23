@@ -8,7 +8,8 @@ class Event < ApplicationRecord
 	has_one :event_short_desc, dependent: :destroy
 	has_one :event_schedule, dependent: :destroy
 	
-	has_and_belongs_to_many :members
+	has_many :participations
+	has_many :members, through: :participations, dependent: :destroy
 
 	scope :in_wanted, -> { where("start_date > ?", Date.today) }
 	scope :in_session, -> { where("(start_date <= ?) AND (end_date >= ?)", Date.today, Date.today) }

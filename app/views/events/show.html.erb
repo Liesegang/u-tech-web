@@ -18,8 +18,15 @@
 							〜
 							<%= @event.event_schedule.end_time.to_s(:time2) %>
 						</div>
-
-						<a href="#" class="btn btn-primary pull-right">イベントに参加</a>
+						<% if logged_in? %>
+							<% if current_member.events.exists?(id: @event.id) %>
+								<%= link_to "参加登録解除", unparticipate_path(@event), method: :delete, class: 'btn btn-primary pull-right' %>
+							<% else %>
+								<%= link_to "イベントに参加", participate_path(@event), method: :post, class: 'btn btn-primary pull-right' %>
+							<% end %>
+						<% else %>
+							<%= link_to "イベントに参加", participate_path(@event), method: :post, class: 'btn btn-primary pull-right' %>
+						<% end %>
 					</div>
 			</div>
 
