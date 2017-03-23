@@ -62,6 +62,7 @@ Rails.application.configure do
   # config.action_mailer.raise_delivery_errors = false
 
   config.action_mailer.default_url_options = { :host => 'u-tech-web.herokuapp.com' }
+<<<<<<< HEAD
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
     :address => 'smtp.gmail.com',
@@ -72,6 +73,8 @@ Rails.application.configure do
     :authentication => :plain,
     :enable_starttls_auto => true
   }
+=======
+>>>>>>> 3f2b97abd89cf515b5f8185c1cd41d835cfbe200
 
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
   # the I18n.default_locale when a translation cannot be found).
