@@ -16,6 +16,7 @@ Event.create(name: "数理論理学", year: 2017, kind: "春休み数学ゼミ",
 Event.create(name: "マスタリングTCP/IP 入門編", year: 2017, kind: "春学期情報ゼミ", start_date: '2017-04-09', end_date: '2017-07-30', image: "tcp_ip.jpg", id: 6)
 Event.create(name: "群論", year: 2017, kind: "春学期数学ゼミ", start_date: '2017-04-08', end_date: '2017-07-29', image: "group.jpg", id: 7)
 Event.create(name: "The Art of Computer Programming Volume1 Fundamental Algorithms", year: 2017, kind: "春学期情報ゼミ", start_date: '2017-05-07', end_date: '2017-07-30', image: "art_of_cp1.jpg", id: 8)
+Event.create(name: "上級量子力学", year: 2017, kind: "春学期物理ゼミ", start_date: '2017-05-07', end_date: '2017-07-30', image: "quantum_mechanics.jpg", id: 9)
 
 
 EventSchedule.destroy_all
@@ -40,6 +41,7 @@ EventShortDesc.create(event_id: 5, desc: "「数理論理学」を読み進め�
 EventShortDesc.create(event_id: 6, desc: "「マスタリングTCP/IP 入門編」を読み進めていく自主ゼミです．内容はネットワーク，TCP/IP，セキュリティーなどです．")
 EventShortDesc.create(event_id: 7, desc: "「代数学1 群と環」を読み進めていく自主ゼミです．群論の基礎を学びます．")
 EventShortDesc.create(event_id: 8, desc: "「The Art of Computer Programming Volume1 Fundamental Algorithms」を読み進めていく自主ゼミです．コンピューターサイエンスを将来的に専門にしたい人必読の本です．")
+EventShortDesc.create(event_id: 9, desc: "このゼミでは物理学において重要な分野である量子論を学習します。具体的には相対論的量子力学、場の量子論を扱います。参加者は初等量子論についての知識を有していることが望まれます。")
 
 
 EventLongDesc.destroy_all
@@ -52,6 +54,7 @@ EventLongDesc.create(event_id: 5, desc: "物理や情報分野などで幅広く
 EventLongDesc.create(event_id: 6, desc: "Webを支えているインターネットについて学ぶことを目的とした自主ゼミです．教科書は「マスタリングTCP/IP 入門編」を用います．ある程度Webアプリケーションを製作した経験や，なんらかの基礎知識があると好ましいですが，初学としてでも可能です．")
 EventLongDesc.create(event_id: 7, desc: "物理や情報分野などで幅広く使われている群論について理解を深めることを目的としたゼミです．教科書は「代数学1 群と環」を用います．参加者は大学一年程度の線形代数と微積分を学んでいる人たちが多いですが，高校数学までの知識でも参加可能です．")
 EventLongDesc.create(event_id: 8, desc: "アルゴリズムについて学ぶ自主ゼミです．教科書は「The Art of Computer Programming Volume1 Fundamental Algorithms」を用います．なんらかのプログラミング言語の使用経験がある人が対象です．")
+EventLongDesc.create(event_id: 9, desc: "このゼミでは物理学において重要な分野である量子論を学習します。具体的には相対論的量子力学、場の量子論を扱います。参加者は初等量子論についての知識を有していることが望まれます。")
 
 
 EventTextbook.destroy_all
@@ -62,7 +65,8 @@ EventTextbook.create(event_id: 4, title: "集合と位相", url: "https://www.sh
 EventTextbook.create(event_id: 5, title: "数理論理学", url: "http://www.utp.or.jp/bd/978-4-13-062915-7.html")
 EventTextbook.create(event_id: 6, title: "マスタリングTCP/IP 入門編", url: "http://shop.ohmsha.co.jp/shopdetail/000000001919/")
 EventTextbook.create(event_id: 7, title: "代数学1 群と環", url: "http://www.utp.or.jp/bd/4-13-062951-4.html")
-EventTextbook.create(event_id: 8, title: "The Art of Computer Programming Volume1 Fundamental Algorithms", url: "https://www.amazon.co.jp/Computer-Programming-Volume1-Fundamental-Algorithms/dp/475614411X")
+EventTextbook.create(event_id: 8, title: "The Art of Computer Programming Volume1 Fundamental Algorithms", url: "http://www.kadokawa.co.jp/product/312303000000/")
+EventTextbook.create(event_id: 7, title: "サクライ上級量子力学〈第1巻〉輻射と粒子", url: "http://planet.maruzen.co.jp/bookdetail.php?pg=16&id=100430151807")
 
 
 EventDatetime.destroy_all
@@ -112,6 +116,7 @@ EventInfo.destroy_all
 
 EventInfo.create(event_id: 1, message: "次回は 3/21() に学生会館で行います", due: "2017-3-21 18:05 +0900")
 EventInfo.create(event_id: 7, message: "初回は 4/8(土) 9:00 - 12:00 です", due: "2017-4-08 12:00 +0900")
+EventInfo.create(event_id: 9, message: "曜日，時間は未定です", due: "2017-5-10 12:00 +0900")
 
 
 EventDoc.destroy_all
