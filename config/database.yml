@@ -30,3 +30,6 @@ test:
 production:
   <<: *default
   database: utech_production
+  host: u-tech-db.clpmfzo8syhi.ap-northeast-1.rds.amazonaws.com
+  username: utech
+  password: S23JRiVSqhuAiiKQplqY3fBX88F7rqvo
