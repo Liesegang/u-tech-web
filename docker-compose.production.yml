@@ -1,7 +1,7 @@
 web:
   build: .
-  command: bundle exec rails s -p 80 -b '0.0.0.0' -e production
+  command: bundle exec rails s -b '0.0.0.0' -e production
   volumes:
     - .:/app # ソースコード変更したらDocker側も即反映されるように
   ports:
-    - "80:80"
+    - "80:3000"
