@@ -1,6 +1,6 @@
 class ContactMailer < ApplicationMailer
 	default from: "utech@gmail.com"   # 送信元アドレス
- 	default to: "yyama0704+utech@gmail.com"     # 送信先アドレス
+ 	default to: "kazuki.utech@gmail.com"     # 送信先アドレス
  
  	def received_email(contact)
     	@contact = contact
