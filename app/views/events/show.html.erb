@@ -90,6 +90,19 @@
 				</div>
 			<% end %>
 
+				<div class="content event_show_member">
+					<h2>参加メンバー</h2>
+					<ul>
+						<% if @event.members.nil? || @event.members.empty? %>
+							<li>参加メンバーはいません．</li>
+						<% else %>
+							<% @event.members.each do |m| %>
+								<li><%= m.nickname %></li>
+							<% end %>
+						<% end %>
+					</ul>
+				</div>
+
 			<% unless @event.info_old.nil? || @event.info_old.empty? %>
 				<div class="content event_show_info_old">
 					<h2>過去のお知らせ</h2>
