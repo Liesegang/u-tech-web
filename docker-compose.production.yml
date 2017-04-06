@@ -1,0 +1,9 @@
+web:
+  build: .
+  command: bundle exec rails s -b '0.0.0.0' -e production
+  volumes:
+    - .:/app # ソースコード変更したらDocker側も即反映されるように
+  ports:
+    - "80:3000"
+  environment:
+    - SECRET_KEY_BASE=8876cd60f4a3c57e2a25a919f6f94f89eb5f46f7f8c22e7915cfef7cb3476bba65a4e6b31386c7771176d94505fde9c216922c6ff27ecd19e491709ab7a12c36

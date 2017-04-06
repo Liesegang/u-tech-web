@@ -12,12 +12,14 @@
 					</div>
 					<div class="col-md-8">
 						<div class="event_show_kind"><%= @event.year %> <%= @event.kind %></div>
-						<div class="event_show_daytime">
-							<%= @event.event_schedule.day %> 
-							<%= @event.event_schedule.start_time.to_s(:time2) %>
-							〜
-							<%= @event.event_schedule.end_time.to_s(:time2) %>
-						</div>
+						<% unless @event.event_schedule.nil? %>
+							<div class="event_show_daytime">
+								<%= @event.event_schedule.day %> 
+								<%= @event.event_schedule.start_time.to_s(:time2) %>
+								〜
+								<%= @event.event_schedule.end_time.to_s(:time2) %>
+							</div>
+						<% end %>
 						<% if logged_in? %>
 							<% if current_member.events.exists?(id: @event.id) %>
 								<%= link_to "参加登録解除", unparticipate_path(@event), method: :delete, class: 'btn btn-primary pull-right' %>
