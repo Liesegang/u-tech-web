@@ -7,6 +7,7 @@ class StaticPagesController < ApplicationController
     end
 
     def welcome
+        # 新歓期は以下の行をコメントアウトしてください。
         render 'welcome_offseason'
     end
 
